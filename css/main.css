@@ -1,0 +1,42 @@
+.container {
+  background-color: #e2e2e2;
+}
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.gallery__col-1 div,
+.gallery__col-2 div {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.gallery__col-1 {
+  width: 70%;
+}
+.gallery__col-2 {
+  width: 30%;
+}
+.item-big {
+  min-width: 600px;
+  height: 600px;
+}
+.item-lil {
+  min-width: 300px;
+  min-height: 300px;
+}
+
+.item-1 {
+  background-image: url('../img/01.jpg');
+}
+.item-2 {
+  background-image: url('../img/02.jpg');
+}
+.item-3 {
+  background-image: url('../img/03.jpg');
+}
+
+.gallery div img {
+  max-width: 100%;
+}
