@@ -3,33 +3,55 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+
+       $("body").mousewheel(function(event, delta) {
+
+          this.scrollLeft -= (delta * 30);
+
+          event.preventDefault();
+
+       });
+
+    });
+    </script>
     <title>Instagrid</title>
   </head>
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="">О себе</a></li>
+          <li><a href="">ФИО</a></li>
+          <li><a href="">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <section class="container">
-      <div class="gallery">
-        <div class="gallery__col-1">
-          <div class="item-big item-1"></div>
-        </div>
-        <div class="gallery__col-2">
-          <div class="item-lil item-2"></div>
-          <div class="item-lil item-3"></div>
-        </div>
-        <div class="gallery__col-1">
-          <div class="item-big item-1"></div>
-        </div>
-        <div class="gallery__col-2">
-          <div class="item-lil item-2"></div>
-          <div class="item-lil item-3"></div>
-        </div>
-        <div class="gallery__col-1">
-          <div class="item-big item-1"></div>
-        </div>
-        <div class="gallery__col-2">
-          <div class="item-lil item-2"></div>
-          <div class="item-lil item-3"></div>
-        </div>
+      <div class="control">
+        <div class="disabled" id="prev"></div>
+        <div id="next"></div>
       </div>
+
+      <section class="gallery">
+        <div class="item-1 large"></div>
+        <div class="item-2 small"></div>
+        <div class="item-3 small"></div>
+        <div class="item-1 large"></div>
+        <div class="item-2 small"></div>
+        <div class="item-3 small"></div>
+        <div class="item-1 large"></div>
+        <div class="item-2 small"></div>
+        <div class="item-3 small"></div>
+      </section>
     </section>
+
+    <footer>
+      <a href="">Noma Bar</a>
+    </footer>
   </body>
 </html>

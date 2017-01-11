@@ -1,42 +1,107 @@
+body {
+
+}
+header,
+footer {
+  width: auto;
+  height: 60px;
+  background-color: #000;
+}
+
 .container {
-  background-color: #e2e2e2;
-}
-.gallery {
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
 }
-.gallery__col-1 div,
-.gallery__col-2 div {
+
+.gallery {
+  margin: 0 auto;
+  display: inline-flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+}
+
+.gallery div {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin: 10px;
 }
-.gallery__col-1 {
-  width: 70%;
+
+.gallery div:nth-child(3n) {
+  margin-left: -310px;
+  margin-top: 320px;
 }
-.gallery__col-2 {
-  width: 30%;
-}
-.item-big {
-  min-width: 600px;
+
+.item-1 {background-image: url('../img/01.jpg');}
+.item-2 {background-image: url('../img/02.jpg');}
+.item-3 {background-image: url('../img/03.jpg');}
+
+.large {
+  width: 600px;
   height: 600px;
 }
-.item-lil {
-  min-width: 300px;
-  min-height: 300px;
+
+.small {
+  width: 300px;
+  height: 300px;
 }
 
-.item-1 {
-  background-image: url('../img/01.jpg');
-}
-.item-2 {
-  background-image: url('../img/02.jpg');
-}
-.item-3 {
-  background-image: url('../img/03.jpg');
+.control {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 51px);
 }
 
-.gallery div img {
-  max-width: 100%;
+.control div {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 30px;
+  cursor: pointer;
+  z-index: 1;
 }
+
+.control .disabled {
+  opacity: 0;
+  cursor: default;
+}
+
+.control div::before,
+.control div::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+}
+
+.control div::before {
+  width: 5px;
+  height: 20px;
+}
+
+.control div::after {
+  width: 20px;
+  height: 5px;
+}
+
+#prev {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#next {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+
+}
+
+header
