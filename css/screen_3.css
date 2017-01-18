@@ -38,8 +38,8 @@ footer div a:hover {
 
 .container {
   width: 80%;
-  margin: 5% auto;
-  height: calc(100vh - 60px);
+  margin: 50px auto;
+  height: calc(100vh - 220px);
   overflow-x: scroll;
   overflow-y: hidden;
 
@@ -67,13 +67,13 @@ footer div a:hover {
 }
 
 .item-big {
-  width: calc(100vh - 60px);
-  height: calc(100vh - 60px);
+  width: calc(100vh - 220px);
+  height: calc(100vh - 220px);
 }
 
 .item-lil {
-  width: calc(50vh - 30px);
-  height: calc(50vh - 30px);
+  width: calc(50vh - 110px);
+  height: calc(50vh - 110px);
 }
 
 .item-1 {background-image: url('../img/01.jpg');}

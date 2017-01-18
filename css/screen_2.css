@@ -34,6 +34,7 @@ footer div a:hover {
 
 .container {
   height: 100vh;
+  height: calc(100vh - 120px);
   overflow-x: scroll;
   overflow-y: hidden;
 }
@@ -59,13 +60,13 @@ footer div a:hover {
 }
 
 .item-big {
-  width: 100vh;
-  height: 100vh;
+  width: calc(100vh - 120px);
+  height: calc(100vh - 120px);
 }
 
 .item-lil {
-  width: 50vh;
-  height: 50vh;
+  width: calc(50vh - 60px);
+  height: calc(50vh - 60px);
 }
 
 .item-1 {background-image: url('../img/01.jpg');}
